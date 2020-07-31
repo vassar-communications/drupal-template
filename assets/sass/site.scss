@@ -1,0 +1,154 @@
+@import "_variables.scss";
+
+/* global nav */
+.vassarlogo {
+    width: 9.5rem;
+    padding: .7rem;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    svg {
+        width: 100%;
+        height: auto;
+        path {
+          fill: #fff;
+          width: 100%;
+          height: auto;
+        }
+    }
+}
+.navbar--vassar {
+    border-bottom: 5px solid #63666A;
+    background: linear-gradient(90deg, #641a2b 0%, #951829 100%);
+}
+.navbar-nav--main {
+    border-top: 1px solid $orange;
+    background-color: $secondary;
+    order: 3;
+    justify-content: center;
+    text-transform:uppercase;
+}
+.navbar-nav--main a,
+.navbar-nav--persona a,
+.navbar-nav--cta a {
+    &:hover,
+    &:focus {
+      background-color:$gray-200;
+    }
+}
+.navbar-nav--main .active a {
+    background-color:$primary;
+}
+.navbar-nav--persona {
+    order: 2;
+    justify-content: flex-end;
+    padding:.5rem 1rem 0;
+    font-size: 90%;
+}
+.navbar-nav--cta {
+    order: 1;
+    justify-content: flex-end;
+    text-transform:uppercase;
+    padding:1rem 1rem .5rem 0;
+    li {
+        margin-left:1rem;
+    }
+    .btn-outline-secondary {
+        color: $white;
+        border-color: $white;
+        background-color: $secondary;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color:$black;
+      }
+    }
+}
+@media (min-width: 768px) {
+  .vassarlogo {
+      width: 11.5rem;
+      top: 0;
+      right: inherit;
+  }
+}
+
+/* end global nav */
+/* begin carousel */
+
+.carousel--main {
+  .carousel-caption {
+    background: rgba(0,0,0,1);
+    text-align: left;
+    padding: .5em;
+    font-size: 90%;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    h5 {
+      margin-bottom: 0;
+      font-size: 2em;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-family: $font-family-sans-serif;
+    }
+    p {
+      margin-bottom: 0
+    }
+    a {
+      color: $white;
+      &:hover,
+      &:focus {
+        color:$red;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+    .carousel--main {
+        .carousel-caption {
+          position: absolute;
+          background: rgba(0,0,0,0.75);
+          left: 2%;
+          right: 48%;
+          bottom: 20px;
+        }
+    }
+}
+.carousel-slide-attribution {
+    font-style: italic;
+    display: block;
+    color: $gray-400;
+}
+.carousel--vassareverywhere {
+    .carousel-inner {
+        height: 10rem;
+    }
+    .carousel-item {
+        display: block;
+        opacity: 0;
+        transition: opacity ease-out .7s;
+    }
+    .carousel-item.active {
+        opacity: 1 !important;
+        height: 10rem;
+    }
+    .carousel-caption {
+        color: $gray-900;
+    }
+}
+
+.linked-header-gradient a {
+    color: $primary;
+    background: linear-gradient(135deg, #641A2B 0%, #ed1c24 70%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    font-size: 3rem;
+    &:after {
+        content: "\2023";
+        margin-left: .25em;
+        font-size: .5em;
+    }
+}
