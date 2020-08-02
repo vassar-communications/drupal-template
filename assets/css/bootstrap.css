@@ -48,7 +48,7 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.45;
-  color: #1A1A1A;
+  color: #4A4A4A;
   text-align: left;
   background-color: #FFFEFD; }
 
@@ -168,7 +168,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #999999;
+  color: #808080;
   text-align: left;
   caption-side: bottom; }
 
@@ -291,7 +291,8 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.75rem;
   font-family: freight-big-pro, serif;
   font-weight: 700;
-  line-height: 1.2; }
+  line-height: 1;
+  color: #951829; }
 
 h1, .h1 {
   font-size: 2.75rem; }
@@ -317,23 +318,23 @@ h6, .h6 {
 
 .display-1 {
   font-size: 6rem;
-  font-weight: 300;
-  line-height: 1.2; }
+  font-weight: 700;
+  line-height: 1; }
 
 .display-2 {
   font-size: 5.5rem;
-  font-weight: 300;
-  line-height: 1.2; }
+  font-weight: 700;
+  line-height: 1; }
 
 .display-3 {
   font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1.2; }
+  font-weight: 700;
+  line-height: 1; }
 
 .display-4 {
   font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2; }
+  font-weight: 700;
+  line-height: 1; }
 
 hr {
   margin-top: 1.5rem;
@@ -343,7 +344,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 90%;
   font-weight: 400; }
 
 mark,
@@ -374,7 +375,7 @@ mark,
 
 .blockquote-footer {
   display: block;
-  font-size: 80%;
+  font-size: 90%;
   color: #63666A; }
   .blockquote-footer::before {
     content: "\2014\00A0"; }
@@ -1140,7 +1141,7 @@ pre {
 .table {
   width: 100%;
   margin-bottom: 1.5rem;
-  color: #1A1A1A; }
+  color: #4A4A4A; }
   .table th,
   .table td {
     padding: 0.75rem;
@@ -1175,7 +1176,7 @@ pre {
   background-color: rgba(0, 0, 1, 0.05); }
 
 .table-hover tbody tr:hover {
-  color: #1A1A1A;
+  color: #4A4A4A;
   background-color: rgba(0, 0, 1, 0.075); }
 
 .table-primary,
@@ -1471,7 +1472,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: 1.1rem;
   line-height: 1.45;
-  color: #1A1A1A;
+  color: #4A4A4A;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
@@ -1527,7 +1528,7 @@ textarea.form-control {
   margin-left: -1.25rem; }
   .form-check-input[disabled] ~ .form-check-label,
   .form-check-input:disabled ~ .form-check-label {
-    color: #999999; }
+    color: #808080; }
 
 .form-check-label {
   margin-bottom: 0; }
@@ -1547,7 +1548,7 @@ textarea.form-control {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 80%;
+  font-size: 90%;
   color: #28a745; }
 
 .valid-tooltip {
@@ -1627,7 +1628,7 @@ textarea.form-control {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 80%;
+  font-size: 90%;
   color: #ED1C24; }
 
 .invalid-tooltip {
@@ -1751,7 +1752,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #1A1A1A;
+  color: #4A4A4A;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -1767,7 +1768,7 @@ textarea.form-control {
     .btn {
       transition: none; } }
   .btn:hover {
-    color: #1A1A1A;
+    color: #4A4A4A;
     text-decoration: none; }
   .btn:focus, .btn.focus {
     outline: 0;
@@ -2244,7 +2245,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1.1rem;
-  color: #1A1A1A;
+  color: #4A4A4A;
   text-align: left;
   list-style: none;
   background-color: #fffffe;
@@ -3849,7 +3850,7 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #E5E5E5; }
   .list-group-item-action:active {
-    color: #1A1A1A;
+    color: #4A4A4A;
     background-color: #D0D0CE; }
 
 .list-group-item {
@@ -4466,6 +4467,7 @@ a.close.disabled {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 1.1rem;
+  color: #951829;
   background-color: #ffffef;
   border-bottom: 1px solid #ffffd5;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -4475,7 +4477,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #1A1A1A; }
+  color: #4A4A4A; }
 
 .carousel {
   position: relative; }
@@ -7070,10 +7072,10 @@ a.text-dark:hover, a.text-dark:focus {
   color: #3e4042 !important; }
 
 .text-body {
-  color: #1A1A1A !important; }
+  color: #4A4A4A !important; }
 
 .text-muted {
-  color: #999999 !important; }
+  color: #808080 !important; }
 
 .text-black-50 {
   color: rgba(0, 0, 1, 0.5) !important; }

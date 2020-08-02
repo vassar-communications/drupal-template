@@ -5,9 +5,11 @@
     width: 9.5rem;
     top: -1rem;
     right: 0;
-    svg {
-        path {
-          fill: #fff;
+    svg path {
+        fill: #fff;
+        &:hover,
+        &:focus {
+            fill:$red;
         }
     }
 }
@@ -17,7 +19,6 @@
 }
 .navbar-nav--main {
     border-top: 1px solid $orange;
-    background-color: $secondary;
 }
 .navbar-nav--main a,
 .navbar-nav--persona a,
@@ -32,7 +33,6 @@
     background-color:$primary;
 }
 .navbar-nav--persona {
-    font-size: 90%;
 }
 @media (min-width: 768px) {
   .vassarlogo {
@@ -41,11 +41,55 @@
       right: inherit;
   }
 }
-
 /* end global nav */
-/* begin carousel */
 
-.carousel--main {
+/* typograpy */
+.gradient-header {
+    color: $primary;
+    background: linear-gradient(135deg, #641A2B 0%, #ed1c24 70%);
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+}
+.gradient-header-underline {
+    &:before {
+        content: "";
+        position: absolute;
+        width: 3em;
+        border-top: 1px solid $red;
+        bottom: -0.25em;
+    }
+}
+.display-4.linked {
+    a {
+        @extend .gradient-header;
+        &:after {
+            content: "\2023";
+            margin-left: .25em;
+            font-size: .5em;
+        }
+        @extend .gradient-header-underline;
+        &:hover,
+        &:focus {
+            color: $red;
+            text-decoration: none;
+        }        
+    }
+}
+.display-4.not-linked {
+    @extend .gradient-header;
+    @extend .gradient-header-underline;
+}
+.display-4.text-white {
+    &:before {
+        border-top: 1px solid $white;
+    }
+}
+/* end typography */
+
+/* begin carousel */
+.carousel--main,
+.carousel--alumnaei {
     .carousel-caption {
         background: linear-gradient(90deg, #641a2b 0%, #951829 100%);
         position: relative;
@@ -56,8 +100,23 @@
         }
     }
 }
+.carousel--vassareverywhere {
+    .carousel-item {
+        display: block;
+        opacity: 0;
+        transition: opacity ease-out .7s;
+    }
+    .carousel-inner,
+    .carousel-item.active {
+        height: 18rem;
+    }
+    .carousel-item.active {
+        opacity: 1 !important;
+    }
+}
 @media (min-width: 768px) {
-    .carousel--main {
+    .carousel--main,
+    .carousel--alumnaei {
         .carousel-caption {
             position: absolute;
             width: 50%;
@@ -65,66 +124,57 @@
             bottom: 20px;
         }
     }
-}
-.carousel--vassareverywhere {
-    .carousel-inner {
-        height: 12rem;
-    }
-    .carousel-item {
-        display: block;
-        opacity: 0;
-        transition: opacity ease-out .7s;
-    }
-    .carousel-item.active {
-        opacity: 1 !important;
-        height: 12rem;
-    }
-    .carousel-indicators li {
-        background-color: $primary;
+    .carousel--vassareverywhere {
+        .carousel-inner,
+        .carousel-item.active {
+            height: 10.5rem;
+        }
     }
 }
-.display-4 {
-    color: $primary;
-    background: linear-gradient(135deg, #641A2B 0%, #ed1c24 70%);
-    -webkit-background-clip: text;
-    color: transparent;
-    position: relative;
-    color: transparent
-    &:before {
-        content: "";
-        position: absolute;
-        width: 3em;
-        border-top: 1px solid $red;
-        left: 0;
-        bottom: -0.25em;
+/* end carousel */
+
+/* begin news */
+.news {
+    .card-text {
+        line-height: 1.15;
     }
 }
-.display-4 a {
-    color: $primary;
-    background: linear-gradient(135deg, #641A2B 0%, #ed1c24 70%);
-    -webkit-background-clip: text;
-    color: transparent;
-    position: relative;
-    margin-bottom: 1em;
-    display: inline-block;
-    &:before {
-        content: "";
-        position: absolute;
-        width: 3em;
-        border-top: 1px solid $red;
-        left: 0;
-        bottom: -0.25em;
-    }
-    &:after {
-        content: "\2023";
-        margin-left: .25em;
-        font-size: .5em;
-    }
-}
+/* end news */
+
+/* begin academics */
 .academics {
     background: #675a46 url("../images/home-section-academic-a.jpg") fixed center right;
     background-size: cover;
     .text-white {
         background-color:rgba(0,0,0,0.8);
     }
+    .row {
+        padding-bottom: 17rem;
+    }
+}
+@media (min-width: 768px) {
+    .academics {
+        .row {
+            padding-bottom: inherit;
+        }
+    }
+}
+/* end academics */
+
+/* facts and stats*/
+.facts {
+    .card-text.text-uppercase.text-nowrap.text-muted {
+        font-size: 90%;
+        letter-spacing: .01em;
+    }
+    .card-text.font-weight-bold.text-primary {
+        font-size: 2.25rem;
+        line-height: 1;
+    }
+}
+
+/* Athletics */
+.athletics {
+    background: #d4cfce url(../images/Vassar_QuadGrid-grey.png) repeat;
+    background-size: 9em;
 }
