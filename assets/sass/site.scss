@@ -177,4 +177,68 @@
 .athletics {
     background: #d4cfce url(../images/Vassar_QuadGrid-grey.png) repeat;
     background-size: 9em;
+    iframe#twitter-widget-0 {
+        height: 30em !important;
+    }
+}
+@media (min-width: 768px) {
+    .athletics {
+        iframe#twitter-widget-0 {
+            height: 100% !important;
+        }
+    }
+}
+/* end athletics */
+
+/* begin campus life */
+.campuslife {
+    background: #675a46 url("../images/110619_160over90_Vassar_5260.jpg") fixed center center;
+    background-size: cover;
+    .text-white {
+        background-color:rgba(0,0,0,0.8);
+    }
+    .row {
+        padding-top: 19rem;
+    }
+}
+/* end campus life */
+
+/* begin arts */
+.arts {
+    .bg-image {
+        background: #675a46 url("../images/kunz-von-der-rosen-met-DP822160-cropped.jpg") center center;
+        background-size: cover;
+        height: 33em
+    }
+}
+/* end arts */
+
+/* Footer */
+.footer {
+    background: #675a46 url("../images/global-footer-bg.jpg") center center;
+    background-size: cover;
+    border-top: 0.3em solid #eee;
+    .card {
+        background-color:rgba(0,0,0,0.8);
+    }
+    .card.social {
+        background-color: transparent;
+        a,
+        a:visited {
+            color: rgba(255,255,255,1);
+        }
+    }
+    a,
+    a:visited {
+        color: rgba(255,255,255,0.50);
+        text-decoration: none;
+    }
+    svg {
+        width:2em;
+        height: auto;
+    }
+    li {
+        line-height: 1.1;
+        margin-bottom: .75em;
+    }
 }
